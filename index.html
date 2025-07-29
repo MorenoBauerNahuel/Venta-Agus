@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prendas Agus</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    color: #333;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-paragraph {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+}
+
+.contact-info {
+    font-weight: bold;
+    color: #667eea;
+    margin-top: 15px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+}
+
+.product-image:nth-child(1) {
+    background: linear-gradient(45deg, #ff6b6b, #ffa726);
+}
+
+.product-card:nth-child(2) .product-image {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.product-card:nth-child(3) .product-image {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.price {
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.price::before {
+    content: '$';
+    color: #667eea;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .info-paragraph {
+        font-size: 1em;
+        padding: 20px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prendas Agus</h1>
+        
+        <div class="info-paragraph">
+            <p>Esta página es de muestra, no se puede comprar. Si querés comprar mandame un mensaje a <strong><a href="https://www.instagram.com/direct/t/105541377513548/?hl=es">@AgusCribari</a></strong> en Instagram, o un WhatsApp al <strong><a href="https://wa.me/541160220376">11 6022-0376</a></strong>.</p>
+        *El nombre de instagram y el wsp te derivan a los chats*
+        </div>
+        
+        <div class="products-grid">
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/1 top.jpg" alt="Top Leonas">
+                </div>
+                <div class="price">10,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/2 pollera.jpg" alt="Pollera Leonas">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/3 pechera-celeste.jpg" alt="Pechera Celeste Leonas">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/3.1 pechera-negra.jpg" alt="Pechera Negra">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/3.2 pechera-rosa.jpg" alt="Pechera Rosa">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/4 sudadera-aqua.jpg" alt="Sudadera Aqua">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/4.1 sudadera-celeste.jpg" alt="Sudadera Celeste">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/4.2 sudadera-fluor.jpg" alt="sudadera-fluor">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/4.3 sudadera-negra.jpg" alt="Sudadera negra">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/5 remera leones azul.jpg" alt="Remera azul leones">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/5.1 remera leones celeste.jpg" alt="Remera Celeste Leones">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/5.2 remera leones negra.jpg" alt="Remera negra leones">
+                </div>
+                <div class="price">15,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/6 titular-leonas.jpg" alt="Remera Titular Leonas">
+                </div>
+                <div class="price">17,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/7 suplente-leonas.jpg" alt="Remera Suplente leonas">
+                </div>
+                <div class="price">17,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/8 short.jpg" alt="Short Leonas">
+                </div>
+                <div class="price">20,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/9 campera gris.jpg" alt="Campera Gris Leonas">
+                </div>
+                <div class="price">27,000</div>
+            </div>
+            <!--PRODUCTO-->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/prendas/9.1 campera negra.jpg" alt="Campera Negra Leonas">
+                </div>
+                <div class="price">27,000</div>
+            </div>
+            
+    </div>
+</body>
+</html>
