@@ -1,8 +1,12 @@
-<style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         body {
@@ -83,7 +87,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.1s ease;
         }
 
         .product-card:hover .product-image img {
@@ -100,12 +104,21 @@
             font-size: 2em;
             font-weight: bold;
         }
-
+        .product-info {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 20px;
+            text-align: center;
         .product-image:empty::after {
             content: 'Imagen no disponible';
             text-align: center;
         }
-
+        .product-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
         .price {
             padding: 20px;
             text-align: center;
@@ -147,4 +160,3 @@
         a {text-decoration: none;
             color: inherit;
         }
-</style>
